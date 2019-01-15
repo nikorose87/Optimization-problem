@@ -46,7 +46,7 @@
 \date{\today}
 \date{}
 \author{Edwin N. Prieto Ph.D(c)., Andres Tovar Ph.D, Dr-Ing. Carlos J. Cortes}
-\institute{\textbf{Indiana University-Purdue University Indianapolis}}
+\institute{\textbf{Universidad Nacional de Colombia - Indiana University Purdue University}}
 \titlegraphic{\hfill\includegraphics[height=1.5cm]{GIBM.png}}
 
 
@@ -98,110 +98,6 @@ The goal of this project is to finalize the prototype for chest tube securing de
 \item 100 pre-production prototypes.
 \end{itemize}
 \end{alertblock}
-\end{frame}
-
-\begin{frame}[fragile]{Engineering targets}
-
-% For every picture that defines or uses external nodes, you'll have to
-% apply the 'remember picture' style. To avoid some typing, we'll apply
-% the style to all pictures.
-\tikzstyle{every picture}+=[remember picture]
-\tikzstyle{na} = [baseline=-.5ex]
-
-  \begin{columns}[T,onlytextwidth]
-    \column{0.5\textwidth}
-	\begin{block}{Top part}
-	\begin{itemize}
-		\item {Flexibility for opening the snaps.} \tikz[na] \coordinate (s-topA);
-		\item {Not exceed the maximum elastic zone.} \tikz[na] \coordinate (s-topB);
-	\end{itemize}
-	\end{block}
-	\begin{block}{Bottom part}
-	\begin{itemize}
-		\item {The adherence with the tape.} \tikz[na] \coordinate (s-topC);
-	\end{itemize}
-	\end{block}
-	\begin{block}{Flexible part}
-	\begin{itemize}
-		\item Adherence. \tikz[na] \coordinate (s-topD);
-		\item Maximum friction. \tikz[na] \coordinate (s-topE);
-	\end{itemize}
-	\end{block}	
-	\column{0.5\textwidth}
-	\vspace{2cm}
-        % Use a background grid to make it easier to find coordinates
-        % When the coordinates have been found, remove the 
-        % 'show background grid' option. 
-        \tikzstyle{background grid}=[draw, black!50,step=.5cm]
-        \begin{tikzpicture}
-            % Put the graphic inside a node. This makes it easy to place the
-            % graphic and to draw on top of it. 
-            % The above right option is used to place the lower left corner
-            % of the image at the (0,0) coordinate. 
-            \node [inner sep=0pt,above right] 
-                {\includegraphics[width=6cm]{chest-tube-flex}};
-            % show origin
-            \fill[fill=IUcolor] (1.6,1.3) circle (2pt);
-            \fill[fill=IUcolor] (1.1,2.2) circle (2pt);
-            \fill[fill=IUcolor] (0.5,0.7) circle (2pt);
-            \fill[fill=IUcolor] (2.8,1.5) circle (2pt);
-            \fill[fill=IUcolor] (2.5,1.2) circle (2pt);
-            % define destination coordinates
-            \path (1.1,2.2) coordinate (topA)
-                  (1.6,1.3) coordinate (topB)
-                  (0.5,0.7) coordinate (topC)
-                  (2.5,1.2) coordinate (topD)
-                  (2.8,1.5) coordinate (topE);
-        \end{tikzpicture}
-  \end{columns}
-
-\begin{tikzpicture}[overlay]
-        \path[->,IUlight,thick] (s-topA) edge [bend left] (topA);
-        \path[->,IUlight,thick] (s-topB) edge [bend left] (topB);
-        \path[->,IUlight,thick] (s-topC) edge [bend right] (topC);
-        \path[->,IUlight,thick] (s-topD) edge [bend right] (topD);
-        \path[->,IUlight,thick] (s-topE) edge [bend right] (topE);
-\end{tikzpicture}
-\end{frame}
-
-% Basically, these are our objectives from the engineering point of view.
-
-\begin{frame}[fragile]{Engineering targets}
-\begin{columns}[T,onlytextwidth]
-	\column{0.5\textwidth}
-	\begin{block}{Whole part}
-	\vspace{1cm}
-	\begin{itemize}
-		\item {The product life (fatigue).}
-		\item {The proper snap-fit.}
-	\end{itemize}
-	\end{block}
-	\column{0.5\textwidth}
-	\begin{figure}
-	\vspace{1cm}
-	\includegraphics[scale=0.25]{chest-tube-flex}
-	\caption{Half-section view complete CTSD}
-	\end{figure}
-\end{columns}
-\end{frame}
-
-\begin{frame}[fragile]{Research Plan}
-
-\begin{alertblock}
-
-According to the design requirements, perform the comparison between 3D printing and plastic injection, in terms of mechanical strength, manufacturing viability, price.  
-\end{alertblock}
-
-\metroset{block=transparent}
-\begin{block}{Research Plan}
-\begin{itemize}[<+- | alert@+>]
-\item Evaluation of the 3D printing process.
-\item Evaluation of the Plastic injection process. 
-\item Numerical analysis process.  
-\item Testing protocol.
-
-\end{itemize}
-\end{block}
 \end{frame}
 
 \section{3D printing process}
